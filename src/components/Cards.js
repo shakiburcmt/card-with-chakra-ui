@@ -1,22 +1,9 @@
 import { Box, Button, ButtonGroup, Card, CardBody, CardFooter, Divider, Flex, Heading, Image, SimpleGrid, Spacer, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import cig from '../assets/cig.png';
+import Timer from './Timer';
 
 const Cards = () => {
-    // cardsData = [
-    //     {
-    //         title: "#B8/457843",
-    //         name: "Enoch Citizen",
-    //         rating: "92",
-    //         price:"260"
-    //     },
-    //     {
-    //         title: "#B8/457843",
-    //         name: "Enoch Citizen",
-    //         rating: "32",
-    //         price:"260"
-    //     },
-    // ]
     return (
         <Card maxW='sm' bg='#112135' color='white'>
             <CardBody>
@@ -36,7 +23,7 @@ const Cards = () => {
                 />
                 <SimpleGrid minChildWidth='120px' spacing='40px'>
                     <Box bg='#151A2E' height='80px'>HIGHEST BID<br />$10</Box>
-                    <Box bg='#131E32' height='80px'>AUCTION ENDS IN</Box>
+                    <Box bg='#131E32' height='80px'>AUCTION ENDS IN <br /><Timer duration={2*24*60*60*1000}></Timer></Box>
                 </SimpleGrid>
                 <Stack mt='6' spacing='3'>
                     <Heading size='md'>Living room Sofa</Heading>
